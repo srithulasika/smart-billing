@@ -62,25 +62,75 @@ switch (grade) {
     console.log("Please enter marks between 0 and 100.");
 }
 
-
-const num=Number(prompt("Enter a number:"));
-for(let i=1; i<=10;i++){
-    console.log(`${num} * ${i} = ${num*i}`);
+//Loop exercises
+const num = Number(prompt("Enter a number:"));
+for (let i = 1; i <= 10; i++) {
+  console.log(`${num} * ${i} = ${num * i}`);
 }
 
-const n=Number(prompt("Enter a number"));
-let sum=0;
-let i=1;
-while(i<=n){
-    sum+=i;
-    i++;
+const n = Number(prompt("Enter a number"));
+let sum = 0;
+let i = 1;
+while (i <= n) {
+  sum += i;
+  i++;
 }
 console.log(`Sum of the numbers: ${sum}`);
 
-const number=Number(prompt("Enter a number"));
-for(let i=1; i<=number; i++){
-    if(i%2===0){
-        console.log(i);
-    }
+const number = Number(prompt("Enter a number"));
+for (let i = 1; i <= number; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
 
+//Patterns
+
+//star pattern
+
+const height = 5;
+for (let i = 1; i <= height; i++) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += "*";
+  }
+  console.log(row);
+}
+
+//number pattern
+
+for (let i = 1; i <= height; i++) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += j;
+  }
+  console.log(row);
+}
+
+// FizzBuzz and prime numbers
+
+for (let i = 1; i <= 30; i++) {
+  if (i % 15 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+console.log("prime Numbers from 2 to 50")
+for (let num = 2; num <= 50; num++) {
+  let isPrime = true;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log(num);
+  }
 }
